@@ -61,35 +61,6 @@ def main(config_file,                       ##0
          CaptureMethod = "",                ##29
          Status = "",                       ##30
          LocalFIPS = "",                    ##31
-         RoadPreDir = "",                   ##32
-         RoadName = "",                     ##33
-         RoadPostDir = "",                  ##34
-         RoadPostType = "",                 ##35
-         City = "",                         ##36
-         State = "",                        ##37
-         ZipCode = "",                      ##38
-         Longitude = "",                    ##39
-         Latitude = "",                     ##40
-         AddressNumberType = "",            ##41
-         AddressLandUseCategory = "",       ##42
-         SourceID = "",                     ##43
-         FeatureID = "",                    ##44
-         CensusAddressCategory = "",        ##45
-         CensusAddressQuality = "",         ##46
-         Severity = "",                     ##47
-         RoadPreType = "",                  ##48
-         RoadPreMod = "",                   ##49
-         RoadPostMod = "",                  ##50
-         FullAddrCt = "",                   ##51
-         AddrNumCt = "",                    ##52
-         UnitIDCt = "",                     ##53
-         RoadPreModCT = "",                 ##54
-         RoadPreDirCT = "",                 ##55
-         RoadPreTypeCT = "",                ##56
-         RoadNameCT = "",                   ##57
-         RoadPostTypeCT = "",               ##58
-         RoadPostDirCT = "",                ##59
-         RoadPostModCT = "",                ##60
 
          *args):
 
@@ -125,8 +96,8 @@ def main(config_file,                       ##0
 
     #Add general publication parameters
     section = 'FIELD_MAPPER'
-    p_names = ['SiteAddressID','AddressPointID','AddressNumberPrefix','AddressNumberSuffix','FullAddressNumber', 'AddressRange', 'AddressUnitType', 'AddressUnitNumber', 'AlternateAddressUnitType', 'AlternateAddressUnitNumber', 'FullRoadName', 'FullAddress', 'PlaceName', 'MunicipalityName', 'EmergencyServiceNumber', 'PublicSafetyAnsweringPoint', 'MSAGCommunity', 'USNGCoordinate', 'Description', 'Location','CaptureMethod', 'Status', 'LocalFIPS', 'RoadPreDir', 'RoadName', 'RoadPostDir', 'RoadPostType', 'City', 'State', 'ZipCode', 'Longitude', 'Latitude', 'AddressNumberType', 'AddressLandUseCategory', 'SourceID', 'FeatureID', 'CensusAddressCategory', 'CensusAddressQuality', 'Severity', 'RoadPreType', 'RoadPreMod', 'RoadPostMod', 'FullAddrCt', 'AddrNumCt', 'UnitIDCt', 'RoadPreModCT', 'RoadPreDirCT', 'RoadPreTypeCT', 'RoadNameCT', 'RoadPostTypeCT', 'RoadPostDirCT', 'RoadPostModCT' ]
-    p_vals  = [ SiteAddressID , AddressPointID , AddressNumberPrefix , AddressNumberSuffix , FullAddressNumber ,  AddressRange ,  AddressUnitType ,  AddressUnitNumber ,  AlternateAddressUnitType ,  AlternateAddressUnitNumber ,  FullRoadName ,  FullAddress ,  PlaceName ,  MunicipalityName ,  EmergencyServiceNumber ,  PublicSafetyAnsweringPoint ,  MSAGCommunity ,  USNGCoordinate ,  Description ,  Location , CaptureMethod,   Status ,  LocalFIPS ,  RoadPreDir ,  RoadName ,  RoadPostDir ,  RoadPostType ,  City ,  State ,  ZipCode ,  Longitude ,  Latitude ,  AddressNumberType ,  AddressLandUseCategory ,  SourceID ,  FeatureID ,  CensusAddressCategory ,  CensusAddressQuality ,  Severity ,  RoadPreType ,  RoadPreMod ,  RoadPostMod ,  FullAddrCt ,  AddrNumCt ,  UnitIDCt ,  RoadPreModCT ,  RoadPreDirCT ,  RoadPreTypeCT ,  RoadNameCT ,  RoadPostTypeCT ,  RoadPostDirCT ,  RoadPostModCT  ]
+    p_names = ['SiteAddressID','AddressPointID','AddressNumberPrefix','AddressNumberSuffix','FullAddressNumber', 'AddressRange', 'AddressUnitType', 'AddressUnitNumber', 'AlternateAddressUnitType', 'AlternateAddressUnitNumber', 'FullRoadName', 'FullAddress', 'PlaceName', 'MunicipalityName', 'EmergencyServiceNumber', 'PublicSafetyAnsweringPoint', 'MSAGCommunity', 'USNGCoordinate', 'Description', 'Location','CaptureMethod', 'Status', 'LocalFIPS' ]
+    p_vals  = [ SiteAddressID , AddressPointID , AddressNumberPrefix , AddressNumberSuffix , FullAddressNumber ,  AddressRange ,  AddressUnitType ,  AddressUnitNumber ,  AlternateAddressUnitType ,  AlternateAddressUnitNumber ,  FullRoadName ,  FullAddress ,  PlaceName ,  MunicipalityName ,  EmergencyServiceNumber ,  PublicSafetyAnsweringPoint ,  MSAGCommunity ,  USNGCoordinate ,  Description ,  Location , CaptureMethod,   Status ,  LocalFIPS  ]
 
     arcpy.AddMessage('Writing general publication configuration parameters...')
     write_config(p_names, p_vals, config, section)

@@ -66,37 +66,6 @@ def main(config_file, *args):
     Location = config.get('FIELD_MAPPER', 'siteaddressid')
     CaptureMethod = config.get('FIELD_MAPPER', 'capturemethod')
     Status = config.get('FIELD_MAPPER', 'status')
-    ##CTTigerFields
-    RoadPreDir = config.get('FIELD_MAPPER', 'roadpredir')
-    RoadName = config.get('FIELD_MAPPER', 'roadname')
-    RoadPostDir = config.get('FIELD_MAPPER', 'roadpostdir')
-    RoadPostType = config.get('FIELD_MAPPER', 'roadposttype')
-    City = config.get('FIELD_MAPPER', 'city')
-    State = config.get('FIELD_MAPPER', 'state')
-    ZipCode = config.get('FIELD_MAPPER', 'zipcode')
-    Longitude = config.get('FIELD_MAPPER', 'longitude')
-    Latitude = config.get('FIELD_MAPPER', 'latitude')
-    AddressNumberType = config.get('FIELD_MAPPER', 'addressnumbertype')
-    AddressLandUseCategory = config.get('FIELD_MAPPER', 'addresslandusecategory')
-    SourceID = config.get('FIELD_MAPPER', 'sourceid')
-    FeatureID = config.get('FIELD_MAPPER', 'featureid')
-    CensusAddressCategory = config.get('FIELD_MAPPER', 'censusaddresscategory')
-    CensusAddressQuality = config.get('FIELD_MAPPER', 'censusaddressquality')
-    Severity = config.get('FIELD_MAPPER', 'severity')
-    RoadPreType = config.get('FIELD_MAPPER', 'roadpretype')
-    RoadPreMod = config.get('FIELD_MAPPER', 'roadpremod')
-    RoadPostMod = config.get('FIELD_MAPPER', 'roadpostmod')
-    FullAddrCt = config.get('FIELD_MAPPER', 'fulladdrct')
-    AddrNumCt = config.get('FIELD_MAPPER', 'addrnumct')
-    UnitIDCt = config.get('FIELD_MAPPER', 'unitidct')
-    RoadPreModCT = config.get('FIELD_MAPPER', 'roadpremodct')
-    RoadPreDirCT = config.get('FIELD_MAPPER', 'roadpredirct')
-    RoadPreTypeCT = config.get('FIELD_MAPPER', 'roadpretypect')
-    RoadNameCT = config.get('FIELD_MAPPER', 'roadnamect')
-    RoadPostTypeCT = config.get('FIELD_MAPPER', 'roadposttypect')
-    RoadPostDirCT = config.get('FIELD_MAPPER', 'roadpostdirct')
-    RoadPostModCT = config.get('FIELD_MAPPER', 'roadpostmodct')
-
 
     print "Loading Configuration File"
     arcpy.AddMessage("Loading Configuration File")
@@ -148,7 +117,7 @@ def main(config_file, *args):
 
     # Delete existing dataset that matches the community parcel schema
         arcpy.management.TruncateTable(communityaddresseslocalcopy)
-        print "Cleaning up local parcel data"
+        print "Cleaning up local address data"
 
 
     # Append new parcels into the community parcels schema, field map your data into the community schema.  Add local data field names after the "#" in the list.
@@ -357,219 +326,15 @@ def main(config_file, *args):
         else:
             new_field = """localfips 'Local FIPS code' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, localfips)
 
-
-        if RoadPreDir =="":
-            new_field = """ROADPREDIR 'Road Prefix Direction' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPREDIR 'Road Prefix Direction' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPreDir)
-
-
-        if RoadName =="":
-            new_field = """ROADNAME 'Road Name' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADNAME 'Road Name' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadName)
-
-
-        if RoadPostDir =="":
-            new_field = """ROADPOSTDIR 'Road Post Direction' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPOSTDIR 'Road Post Direction' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPostDir)
-
-
-        if RoadPostType =="":
-            new_field = """ROADPOSTTYPE 'Road Post Type' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPOSTTYPE 'Road Post Type' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPostType)
-
-
-        if City =="":
-            new_field = """CITY 'City' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """CITY 'City' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, City)
-
-
-        if State =="":
-            new_field = """STATE 'State' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """STATE 'State' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, State)
-
-
-        if ZipCode =="":
-            new_field = """ZIPCODE 'Zip Code' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ZIPCODE 'Zip Code' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, ZipCode)
-
-
-        if Longitude =="":
-            new_field = """LONGITUDE 'Longitude' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """LONGITUDE 'Longitude' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, Longitude)
-
-
-        if Latitude =="":
-            new_field = """LATITUDE 'Latitude' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """LATITUDE 'Latitude' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, Lattitude)
-
-
-        if AddressNumberType =="":
-            new_field = """ADDRESSNUMBERTYPE 'Address Number Type' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ADDRESSNUMBERTYPE 'Address Number Type' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AddressNumberType)
-
-
-        if AddressLandUseCategory =="":
-            new_field = """ADDRESSLANDUSECATEGORY 'Address Land Use Category' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ADDRESSLANDUSECATEGORY 'Address Land Use Category' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AddressLandUseCategory)
-
-
-        if SourceID =="":
-            new_field = """SOURCEID 'Source ID' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """SOURCEID 'Source ID' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, SourceID)
-
-
-        if FeatureID =="":
-            new_field = """FEATUREUID 'FeatureUID' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """FEATUREUID 'FeatureUID' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, FeatureID)
-
-
-        if CensusAddressCategory =="":
-            new_field = """CENSUSADDRESSCATEGORY 'Census Address Category' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """CENSUSADDRESSCATEGORY 'Census Address Category' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, CensusAddressCategory)
-
-
-        if CensusAddressQuality =="":
-            new_field = """CENSUSADDRESSQUALITY 'Census Address Quality' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """CENSUSADDRESSQUALITY 'Census Address Quality' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, CensusAddressQuality)
-
-
-        if Severity =="":
-            new_field = """SEVERITY 'Severity' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """SEVERITY 'Severity' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, Severity)
-
-
-        if RoadPreType =="":
-            new_field = """ROADPRETYPE 'Road Prefix Type' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPRETYPE 'Road Prefix Type' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPreType)
-
-
-        if RoadPreMod =="":
-            new_field = """ROADPREMOD 'Road Prefix Modifier' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPREMOD 'Road Prefix Modifier' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPreMod)
-
-
-        if RoadPostMod =="":
-            new_field = """ROADPOSTMOD 'Road Post Modifier' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPOSTMOD 'Road Post Modifier' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPostMod)
-
-
-        if FullAddrCt =="":
-            new_field = """FULLADDR_CT 'FULLADDR_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """FULLADDR_CT 'FULLADDR_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, FullAddrCt)
-
-
-        if AddrNumCt =="":
-            new_field = """ADDRNUM_CT 'ADDRNUM_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ADDRNUM_CT 'ADDRNUM_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AddrNumCt)
-
-
-        if UnitIDCt =="":
-            new_field = """UNITID_CT 'UNITID_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """UNITID_CT 'UNITID_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, UnitIDCt)
-
-
-        if RoadPreModCT =="":
-            new_field = """ROADPREMOD_CT 'ROADPREMOD_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPREMOD_CT 'ROADPREMOD_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPreModCT)
-
-
-        if RoadPreDirCT =="":
-            new_field = """ROADPREDIR_CT 'ROADPREDIR_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPREDIR_CT 'ROADPREDIR_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPreDirCT)
-
-
-        if RoadPreTypeCT =="":
-            new_field = """ROADPRETYPE_CT 'ROADPRETYPE_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPRETYPE_CT 'ROADPRETYPE_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPreTypeCT)
-
-
-        if RoadNameCT =="":
-            new_field = """ROADNAME_CT 'ROADNAME_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADNAME_CT 'ROADNAME_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadNameCT)
-
-
-        if RoadPostTypeCT =="":
-            new_field = """ROADPOSTTYPE_CT 'ROADPOSTTYPE_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPOSTTYPE_CT 'ROADPOSTTYPE_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPostTypeCT)
-
-
-        if RoadPostDirCT =="":
-            new_field = """ROADPOSTDIR_CT 'ROADPOSTDIR_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPOSTDIR_CT 'ROADPOSTDIR_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPostDirCT)
-
-
-        if RoadPostModCT =="":
-            new_field = """ROADPOSTMOD_CT 'ROADPOSTMOD_CT' true true false 50 Text 0 0, First, #"""
-
-        else:
-            new_field = """ROADPOSTMOD_CT 'ROADPOSTMOD_CT' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, RoadPostModCT)
-
-
         field_map = "{}; {}".format(field_map, new_field)
 
 
         arcpy.Append_management(localaddresses, communityaddresseslocalcopy, "NO_TEST", field_map)
 
-        print "Mapping Local Parcel data to Community Parcel Schema"
-        print "Community Parcel Update to ArcGIS Online Started, please be patient"
-        arcpy.AddMessage("Mapping Local Parcel data to Community Parcel Schema")
-        arcpy.AddMessage("Community Parcel Update to ArcGIS Online Started, please be patient")
+        print "Mapping Local Address data to Community Address Schema"
+        print "Community Address Update to ArcGIS Online Started, please be patient"
+        arcpy.AddMessage("Mapping Local Address data to Community Address Schema")
+        arcpy.AddMessage("Community Address Update to ArcGIS Online Started, please be patient")
 
 
         # Calculate the Last Update field
@@ -624,8 +389,8 @@ def main(config_file, *args):
             pass
 
 
-        print "Community Parcels upload Started"
-        arcpy.AddMessage("Community Parcels upload started, please be patient.  For future consideration, please run tool during non-peak internet usage")
+        print "Community Address upload Started"
+        arcpy.AddMessage("Community Address upload started, please be patient.  For future consideration, please run tool during non-peak internet usage")
         fs.addFeatures(communityaddresseslocalcopy)
 
 
