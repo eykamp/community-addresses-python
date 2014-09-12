@@ -85,7 +85,7 @@ def main(config_file, *args):
     common_vars = "true true false 250 Text 0 0, First, #"
 
     if SiteAddressID == "":
-        new_field = """SITEADDID 'Site Address ID' true true false 20 Text 0 0, First, #"""
+        new_field = """SITEADDID 'Site Address ID' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """SITEADDID 'Site Address ID' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, SiteAddressID)
@@ -93,7 +93,7 @@ def main(config_file, *args):
 
 
     if AddressPointID =="":
-        new_field = """ADDPTKEY 'Address Point ID' true true false 50 Text 0 0, First, #"""
+        new_field = """ADDPTKEY 'Address Point ID' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """ADDPTKEY 'Address Point ID' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AddressPointID)
@@ -102,7 +102,7 @@ def main(config_file, *args):
 
 
     if AddressNumberPrefix =="":
-        new_field = """PREADDRNUM 'Address Number Prefix' true true false 50 Text 0 0, First, #"""
+        new_field = """PREADDRNUM 'Address Number Prefix' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """PREADDRNUM 'Address Number Prefix' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AddressNumberPrefix)
@@ -111,7 +111,7 @@ def main(config_file, *args):
 
 
     if AddressNumberSuffix =="":
-        new_field = """ADDRNUMSUF  'Address Number Suffix' true true false 50 Text 0 0, First, #"""
+        new_field = """ADDRNUMSUF  'Address Number Suffix' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """ADDRNUMSUF  'Address Number Suffix' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AddressNumberSuffix)
@@ -120,7 +120,7 @@ def main(config_file, *args):
 
 
     if FullAddressNumber =="":
-        new_field = """ADDRNUM  'Full Address Number' true true false 50 Text 0 0, First, #"""
+        new_field = """ADDRNUM  'Full Address Number' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """ADDRNUM  'Full Address Number' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, FullAddressNumber)
@@ -129,7 +129,7 @@ def main(config_file, *args):
 
 
     if AddressRange =="":
-        new_field = """ADDRRANGE 'Address Range' true true false 50 Text 0 0, First, #"""
+        new_field = """ADDRRANGE 'Address Range' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """ADDRRANGE 'Address Range' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AddressRange)
@@ -137,7 +137,7 @@ def main(config_file, *args):
     field_map = "{}; {}".format(field_map, new_field)
 
     if AddressUnitType =="":
-        new_field = """UNITTYPE 'Address Unit Type' true true false 50 Text 0 0, First, #"""
+        new_field = """UNITTYPE 'Address Unit Type' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """UNITTYPE 'Address Unit Type' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AddressUnitType)
@@ -146,7 +146,7 @@ def main(config_file, *args):
 
 
     if AddressUnitNumber =="":
-        new_field = """UNITID 'Address Unit Number' true true false 50 Text 0 0, First, #"""
+        new_field = """UNITID 'Address Unit Number' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """UNITID 'Address Unit Number' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AddressUnitNumber)
@@ -155,7 +155,7 @@ def main(config_file, *args):
 
 
     if AlternateAddressUnitType =="":
-        new_field = """ALTUNITTYPE 'Alternate Address Unit Type' true true false 50 Text 0 0, First, #"""
+        new_field = """ALTUNITTYPE 'Alternate Address Unit Type' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """ALTUNITTYPE 'Alternate Address Unit Type' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AlternateAddressUnitType)
@@ -164,7 +164,7 @@ def main(config_file, *args):
 
 
     if AlternateAddressUnitNumber =="":
-        new_field = """ALTUNITID 'Alternate Address Unit Number' true true false 50 Text 0 0, First, #"""
+        new_field = """ALTUNITID 'Alternate Address Unit Number' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """ALTUNITID 'Alternate Address Unit Number' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, AlternateAddressUnitNumber)
@@ -173,7 +173,7 @@ def main(config_file, *args):
 
 
     if FullRoadName =="":
-        new_field = """FULLNAME 'Full Road Name' true true false 50 Text 0 0, First, #"""
+        new_field = """FULLNAME 'Full Road Name' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """FULLNAME 'Full Road Name' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, FullRoadName)
@@ -182,7 +182,7 @@ def main(config_file, *args):
 
 
     if FullAddress =="":
-        new_field = """FULLADDR 'Full Address' true true false 250 Text 0 0, First, #"""
+        new_field = """FULLADDR 'Full Address' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """FULLADDR 'Full Address' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, FullAddress)
@@ -191,7 +191,7 @@ def main(config_file, *args):
 
 
     if PlaceName =="":
-        new_field = """PLACENAME 'Place Name' true true false 50 Text 0 0, First, #"""
+        new_field = """PLACENAME 'Place Name' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """PLACENAME 'Place Name' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, PlaceName)
@@ -199,7 +199,7 @@ def main(config_file, *args):
     field_map = "{}; {}".format(field_map, new_field)
 
     if MunicipalityName =="":
-        new_field = """MUNICIPALITY  'Municipality Name' true true false 50 Text 0 0, First, #"""
+        new_field = """MUNICIPALITY  'Municipality Name' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """MUNICIPALITY  'Municipality Name' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, MunicipalityName)
@@ -208,7 +208,7 @@ def main(config_file, *args):
 
 
     if EmergencyServiceNumber =="":
-        new_field = """ESN 'Emergency Service Number' true true false 50 Text 0 0, First, #"""
+        new_field = """ESN 'Emergency Service Number' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """ESN 'Emergency Service Number' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, EmergencyServiceNumber)
@@ -217,7 +217,7 @@ def main(config_file, *args):
 
 
     if PublicSafetyAnsweringPoint =="":
-        new_field = """PSAP 'Public Safety Answering Point' true true false 50 Text 0 0, First, #"""
+        new_field = """PSAP 'Public Safety Answering Point' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """PSAP 'Public Safety Answering Point' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, PublicSafetyAnsweringPoint)
@@ -226,7 +226,7 @@ def main(config_file, *args):
 
 
     if MSAGCommunity =="":
-        new_field = """MSAG 'MSAG Community' true true false 50 Text 0 0, First, #"""
+        new_field = """MSAG 'MSAG Community' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """MSAG 'MSAG Community' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, MSAGCommunity)
@@ -235,7 +235,7 @@ def main(config_file, *args):
 
 
     if USNGCoordinate =="":
-        new_field = """USNGCOORD 'USNG Coordinate' true true false 50 Text 0 0, First, #"""
+        new_field = """USNGCOORD 'USNG Coordinate' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """USNGCOORD 'USNG Coordinate' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, USNGCoordinate)
@@ -244,7 +244,7 @@ def main(config_file, *args):
 
 
     if Description =="":
-        new_field = """ADDRCLASS 'Description' true true false 50 Text 0 0, First, #"""
+        new_field = """ADDRCLASS 'Description' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """ADDRCLASS 'Description' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, Description)
@@ -253,7 +253,7 @@ def main(config_file, *args):
 
 
     if Location =="":
-        new_field = """POINTTYPE 'Location' true true false 50 Text 0 0, First, #"""
+        new_field = """POINTTYPE 'Location' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """POINTTYPE 'Location' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, Location)
@@ -261,7 +261,7 @@ def main(config_file, *args):
     field_map = "{}; {}".format(field_map, new_field)
 
     if  CaptureMethod =="":
-        new_field = """CAPTUREMETH 'Capture Method' true true false 50 Text 0 0, First, #"""
+        new_field = """CAPTUREMETH 'Capture Method' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """CAPTUREMETH 'Capture Method' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, CaptureMethod)
@@ -270,7 +270,7 @@ def main(config_file, *args):
 
 
     if Status =="":
-        new_field = """STATUS 'Status' true true false 50 Text 0 0, First, #"""
+        new_field = """STATUS 'Status' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """STATUS 'Status' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, Status)
@@ -279,7 +279,7 @@ def main(config_file, *args):
 
 
     if localfips =="":
-        new_field = """localfips 'Local FIPS code' true true false 50 Text 0 0, First, #"""
+        new_field = """localfips 'Local FIPS code' true true false 300 Text 0 0, First, #"""
 
     else:
         new_field = """localfips 'Local FIPS code' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, localfips)
