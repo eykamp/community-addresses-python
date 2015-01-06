@@ -82,7 +82,7 @@ def main(config_file, *args):
     # Append new parcels into the community addresses schema, field map your data into the community schema.  Add local data field names after the "#" in the list.
     # For example, for STATEAREA "STATEAREA" true true false 50 Text 0 0 ,First,#,LocalParcels,TotalAcres,-1,-1;  The local Parcels field name from STATEDAREA (community parcels schema) is TotalAcres.
 
-    common_vars = "true true false 250 Text 0 0, First, #"
+    common_vars = "true true false 300 Text 0 0, First, #"
 
     if SiteAddressID == "":
         new_field = """SITEADDID 'Site Address ID' true true false 300 Text 0 0, First, #"""
