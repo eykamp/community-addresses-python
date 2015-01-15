@@ -25,36 +25,36 @@ def write_config(names, vals, config, section):
         config.set(section, names[i], vals[i])
         i += 1
 
-def main(config_file,                       ##0
+def main(config_file,                       #0
 
-         localaddresses = "",               ##1
-         communityaddresseslocalcopy ="",   ##2
-         CreateCurrent = True,              ##3
-         localfips ="",                     ##4
+         localaddresses = "",               #1
+         communityaddresseslocalcopy ="",   #2
+         CreateCurrent = True,              #3
+         localfips ="",                     #4
 
-         SiteAddressID = "",                ##5-x
-         AddressPointID =  "",              ##6-x
-         AddressNumberPrefix = "",          ##7-x
-         AddressNumberSuffix = "",          ##8-x
-         FullAddressNumber = "",            ##9-x
-         AddressRange = "",                 ##10-x
-         AddressUnitType = "",              ##11-x
-         AddressUnitNumber = "",            ##12-x
-         AlternateAddressUnitType = "",     ##13-x
-         AlternateAddressUnitNumber = "",   ##14-x
-         FullRoadName = "",                 ##15-x
-         FullAddress = "",                  ##16-x
-         PlaceName = "",                    ##17-x
-         MunicipalityName = "",             ##18-x
-         EmergencyServiceNumber = "",       ##19-x
-         PublicSafetyAnsweringPoint = "",   ##20-x
-         MSAGCommunity = "",                ##21-x
-         USNGCoordinate = "",               ##22-x
-         Description = "",                  ##23-x
-         Location = "",                     ##24-x
-         CaptureMethod = "",                ##25-x
-         Status = "",                       ##26-x
-         LocalFIPS = "",                    ##27-x
+         SiteAddressID = "",                #5
+         AddressPointID =  "",              #6
+         AddressNumberPrefix = "",          #7
+         AddressNumberSuffix = "",          #8
+         FullAddressNumber = "",            #9
+         AddressRange = "",                 #10
+         AddressUnitType = "",              #11
+         AddressUnitNumber = "",            #12
+         AlternateAddressUnitType = "",     #13
+         AlternateAddressUnitNumber = "",   #14
+         FullRoadName = "",                 #15
+         FullAddress = "",                  #16
+         PlaceName = "",                    #17
+         MunicipalityName = "",             #18
+         EmergencyServiceNumber = "",       #19
+         PublicSafetyAnsweringPoint = "",   #20
+         MSAGCommunity = "",                #21
+         USNGCoordinate = "",               #22
+         Description = "",                  #23
+         Location = "",                     #24
+         CaptureMethod = "",                #25
+         Status = "",                       #26
+         LocalFIPS = "",                    #27
 
          *args):
 
@@ -72,8 +72,53 @@ def main(config_file,                       ##0
 
     #Add general publication parameters
     section = 'FIELD_MAPPER'
-    p_names = ['SiteAddressID','AddressPointID','AddressNumberPrefix','AddressNumberSuffix','FullAddressNumber', 'AddressRange', 'AddressUnitType', 'AddressUnitNumber', 'AlternateAddressUnitType', 'AlternateAddressUnitNumber', 'FullRoadName', 'FullAddress', 'PlaceName', 'MunicipalityName', 'EmergencyServiceNumber', 'PublicSafetyAnsweringPoint', 'MSAGCommunity', 'USNGCoordinate', 'Description', 'Location', 'CaptureMethod','Status', 'LocalFIPS' ]
-    p_vals  = [ SiteAddressID , AddressPointID , AddressNumberPrefix , AddressNumberSuffix , FullAddressNumber ,  AddressRange ,  AddressUnitType ,  AddressUnitNumber ,  AlternateAddressUnitType ,  AlternateAddressUnitNumber ,  FullRoadName ,  FullAddress ,  PlaceName ,  MunicipalityName ,  EmergencyServiceNumber ,  PublicSafetyAnsweringPoint ,  MSAGCommunity ,  USNGCoordinate ,  Description ,  Location ,  CaptureMethod,  Status ,  LocalFIPS  ]
+    p_names = ['SiteAddressID',
+                'AddressPointID',
+                'AddressNumberPrefix',
+                'AddressNumberSuffix',
+                'FullAddressNumber',
+                'AddressRange',
+                'AddressUnitType',
+                'AddressUnitNumber',
+                'AlternateAddressUnitType',
+                'AlternateAddressUnitNumber',
+                'FullRoadName',
+                'FullAddress',
+                'PlaceName',
+                'MunicipalityName',
+                'EmergencyServiceNumber',
+                'PublicSafetyAnsweringPoint',
+                'MSAGCommunity',
+                'USNGCoordinate',
+                'Description',
+                'Location',
+                'CaptureMethod',
+                'Status',
+                'LocalFIPS' ]
+
+    p_vals  = [ SiteAddressID ,
+                AddressPointID ,
+                AddressNumberPrefix ,
+                AddressNumberSuffix ,
+                FullAddressNumber ,
+                AddressRange ,
+                AddressUnitType ,
+                AddressUnitNumber ,
+                AlternateAddressUnitType ,
+                AlternateAddressUnitNumber ,
+                FullRoadName ,
+                FullAddress ,
+                PlaceName ,
+                MunicipalityName ,
+                EmergencyServiceNumber ,
+                PublicSafetyAnsweringPoint ,
+                MSAGCommunity ,
+                USNGCoordinate ,
+                Description ,
+                Location ,
+                CaptureMethod,
+                Status ,
+                LocalFIPS  ]
 
     arcpy.AddMessage('Writing general publication configuration parameters...')
     write_config(p_names, p_vals, config, section)

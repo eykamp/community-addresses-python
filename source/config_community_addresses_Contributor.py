@@ -69,8 +69,15 @@ def main(config_file,                       ##0
 
     # Add general parameters
     section = 'LOCAL_DATA'
-    p_names = ['LOCALADDRESSES','COMMUNITYADDRESSESLOCALCOPY','CreateCurrent','localfips']
-    p_vals  = [ localaddresses,  communityaddresseslocalcopy,   CreateCurrent , localfips ]
+    p_names = ['LOCALADDRESSES',
+                'COMMUNITYADDRESSESLOCALCOPY',
+                'CreateCurrent',
+                'localfips']
+
+    p_vals  = [ localaddresses,
+                communityaddresseslocalcopy,
+                CreateCurrent ,
+                localfips ]
 
     arcpy.AddMessage('Writing general parameters...')
     write_config(p_names, p_vals, config, section)
@@ -96,8 +103,53 @@ def main(config_file,                       ##0
 
     #Add general publication parameters
     section = 'FIELD_MAPPER'
-    p_names = ['SiteAddressID','AddressPointID','AddressNumberPrefix','AddressNumberSuffix','FullAddressNumber', 'AddressRange', 'AddressUnitType', 'AddressUnitNumber', 'AlternateAddressUnitType', 'AlternateAddressUnitNumber', 'FullRoadName', 'FullAddress', 'PlaceName', 'MunicipalityName', 'EmergencyServiceNumber', 'PublicSafetyAnsweringPoint', 'MSAGCommunity', 'USNGCoordinate', 'Description', 'Location','CaptureMethod', 'Status', 'LocalFIPS' ]
-    p_vals  = [ SiteAddressID , AddressPointID , AddressNumberPrefix , AddressNumberSuffix , FullAddressNumber ,  AddressRange ,  AddressUnitType ,  AddressUnitNumber ,  AlternateAddressUnitType ,  AlternateAddressUnitNumber ,  FullRoadName ,  FullAddress ,  PlaceName ,  MunicipalityName ,  EmergencyServiceNumber ,  PublicSafetyAnsweringPoint ,  MSAGCommunity ,  USNGCoordinate ,  Description ,  Location , CaptureMethod,   Status ,  LocalFIPS  ]
+    p_names = ['SiteAddressID',
+                'AddressPointID',
+                'AddressNumberPrefix',
+                'AddressNumberSuffix',
+                'FullAddressNumber',
+                'AddressRange',
+                'AddressUnitType',
+                'AddressUnitNumber',
+                'AlternateAddressUnitType',
+                'AlternateAddressUnitNumber',
+                'FullRoadName',
+                'FullAddress',
+                'PlaceName',
+                'MunicipalityName',
+                'EmergencyServiceNumber',
+                'PublicSafetyAnsweringPoint',
+                'MSAGCommunity',
+                'USNGCoordinate',
+                'Description',
+                'Location',
+                'CaptureMethod',
+                'Status',
+                'LocalFIPS' ]
+
+    p_vals  = [ SiteAddressID ,
+                AddressPointID ,
+                AddressNumberPrefix ,
+                AddressNumberSuffix ,
+                FullAddressNumber ,
+                AddressRange ,
+                AddressUnitType ,
+                AddressUnitNumber ,
+                AlternateAddressUnitType ,
+                AlternateAddressUnitNumber ,
+                FullRoadName ,
+                FullAddress ,
+                PlaceName ,
+                MunicipalityName ,
+                EmergencyServiceNumber ,
+                PublicSafetyAnsweringPoint ,
+                MSAGCommunity ,
+                USNGCoordinate ,
+                Description ,
+                Location ,
+                CaptureMethod,
+                Status ,
+                LocalFIPS  ]
 
     arcpy.AddMessage('Writing general publication configuration parameters...')
     write_config(p_names, p_vals, config, section)
