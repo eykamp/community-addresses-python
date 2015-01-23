@@ -52,9 +52,6 @@ def main(config_file, *args):
     FullAddress = config.get('FIELD_MAPPER', 'fulladdress')
     PlaceName = config.get('FIELD_MAPPER', 'placename')
     MunicipalityName = config.get('FIELD_MAPPER', 'municipalityname')
-    EmergencyServiceNumber = config.get('FIELD_MAPPER', 'emergencyservicenumber')
-    PublicSafetyAnsweringPoint = config.get('FIELD_MAPPER', 'publicsafetyansweringpoint')
-    MSAGCommunity = config.get('FIELD_MAPPER', 'msagcommunity')
     USNGCoordinate = config.get('FIELD_MAPPER', 'usngcoordinate')
     Description = config.get('FIELD_MAPPER', 'description')
     Location = config.get('FIELD_MAPPER', 'siteaddressid')
@@ -203,33 +200,6 @@ def main(config_file, *args):
 
     else:
         new_field = """MUNICIPALITY  'Municipality Name' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, MunicipalityName)
-
-    field_map = "{}; {}".format(field_map, new_field)
-
-
-    if EmergencyServiceNumber =="":
-        new_field = """ESN 'Emergency Service Number' true true false 300 Text 0 0, First, #"""
-
-    else:
-        new_field = """ESN 'Emergency Service Number' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, EmergencyServiceNumber)
-
-    field_map = "{}; {}".format(field_map, new_field)
-
-
-    if PublicSafetyAnsweringPoint =="":
-        new_field = """PSAP 'Public Safety Answering Point' true true false 300 Text 0 0, First, #"""
-
-    else:
-        new_field = """PSAP 'Public Safety Answering Point' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, PublicSafetyAnsweringPoint)
-
-    field_map = "{}; {}".format(field_map, new_field)
-
-
-    if MSAGCommunity =="":
-        new_field = """MSAG 'MSAG Community' true true false 300 Text 0 0, First, #"""
-
-    else:
-        new_field = """MSAG 'MSAG Community' {}, {}, {}, -1, -1""".format(common_vars, localaddresses, MSAGCommunity)
 
     field_map = "{}; {}".format(field_map, new_field)
 

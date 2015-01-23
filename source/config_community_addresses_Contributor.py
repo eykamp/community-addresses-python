@@ -25,6 +25,8 @@ def write_config(names, vals, config, section):
         config.set(section, names[i], vals[i])
         i += 1
 
+#Set the configuration parameters
+
 def main(config_file,                       ##0
 
          localaddresses = "",               ##1
@@ -52,15 +54,12 @@ def main(config_file,                       ##0
          FullAddress = "",                  ##20
          PlaceName = "",                    ##21
          MunicipalityName = "",             ##22
-         EmergencyServiceNumber = "",       ##23
-         PublicSafetyAnsweringPoint = "",   ##24
-         MSAGCommunity = "",                ##25
-         USNGCoordinate = "",               ##26
-         Description = "",                  ##27
-         Location = "",                     ##28
-         CaptureMethod = "",                ##29
-         Status = "",                       ##30
-         LocalFIPS = "",                    ##31
+         USNGCoordinate = "",               ##23
+         Description = "",                  ##24
+         Location = "",                     ##25
+         CaptureMethod = "",                ##26
+         Status = "",                       ##37
+         LocalFIPS = "",                    ##38
 
          *args):
 
@@ -117,9 +116,6 @@ def main(config_file,                       ##0
                 'FullAddress',
                 'PlaceName',
                 'MunicipalityName',
-                'EmergencyServiceNumber',
-                'PublicSafetyAnsweringPoint',
-                'MSAGCommunity',
                 'USNGCoordinate',
                 'Description',
                 'Location',
@@ -141,9 +137,6 @@ def main(config_file,                       ##0
                 FullAddress ,
                 PlaceName ,
                 MunicipalityName ,
-                EmergencyServiceNumber ,
-                PublicSafetyAnsweringPoint ,
-                MSAGCommunity ,
                 USNGCoordinate ,
                 Description ,
                 Location ,
