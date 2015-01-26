@@ -72,7 +72,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 A copy of the license is available in the repository's
-[LICENSE.txt](https://github.com/Esri/community-parcels-python/blob/master/License.txt) file.
+[LICENSE.txt](https://github.com/Esri/community-addresses-python/blob/master/License.txt) file.
 
 [](Esri Tags: LocalGovernment CommunityAddresses AGOL Python ArcGIS-Online State-Government Government)
 [](Esri Language: Python)
