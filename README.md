@@ -5,9 +5,9 @@
 
 Update Community Addresses
 
-The Community Parcel solution will leverage the core ArcGIS Platform to help communities aggregate address information from authoritative sources in a simple and sustainable way and leverage this information in many workflows. 
+The Community Parcel solution will leverage the core ArcGIS Platform to help communities aggregate address information from authoritative sources in a simple and sustainable way and leverage this information in many workflows.
 
-This GitHub repository houses the data aggregation toolset used to update the community address feature service. 
+This GitHub repository houses the data aggregation toolset used to update the community address feature service.
 
 This solutions makes use of [ArcRest] (https://github.com/Esri/ArcREST)
 
@@ -17,7 +17,7 @@ Toolset Include the following:
 
 2. Update the Community Address service - Truncate, delete addresses from existing service (based on FIPS code), Add authoritative address data from a local source.
 
-3. Promote ongoing contributions - Run ad-hoc (quarterly, weekly, daily), Schedule nightly using a script 
+3. Promote ongoing contributions - Run ad-hoc (quarterly, weekly, daily), Schedule nightly using a script
 
 
 
@@ -32,7 +32,7 @@ Toolset Include the following:
 * For editing and customizing the scripts - Notepad or a Python Editor
 * Basic understanding of GeoProcessing with ArcGIS
 * ArcGIS Desktop 10.2 or ArcGIS Desktop 10.3
- 
+
 ## Resources
 
 Learn more abour the [Community Parcels] (http://solutions.arcgis.com/state-government/help/community-addresses/).
@@ -74,5 +74,5 @@ limitations under the License.
 A copy of the license is available in the repository's
 [LICENSE.txt](https://github.com/Esri/community-addresses-python/blob/master/License.txt) file.
 
-[](Esri Tags: Local-Government CommunityAddresses AGOL Python ArcGIS-Online State-Government Government)
+[](Esri Tags: ArcGISSolutions State-Government Local-Government State Local Government Online Apps Community Addresses)
 [](Esri Language: Python)
