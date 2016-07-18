@@ -1,5 +1,6 @@
-# Community Addresses
+# Community Addresses.
 
+***This community-addresses-python repo has been replaced by the Data Assistant in the [data-assistant repo](https://github.com/Esri/data-assistant) Applications built from this community-addresses-python repo are in mature support.***
 
 ## Features
 
